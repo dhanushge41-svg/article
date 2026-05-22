@@ -6,6 +6,17 @@
    <center>
       <h2>{{data.title}}</h2>
       <h3>{{data.desc}}</h3>
-      <img src="{{data.image}}" alt="">
+      <img 
+  src="{{data.image}}" 
+  alt="image"
+  style="
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+  "
+>
    </center>
 {% endblock %}
