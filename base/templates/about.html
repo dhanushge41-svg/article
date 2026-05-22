@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+
+{% block abc %}
+<h2> about page </h2>
+<center>
+    {% for i in data %}
+      <h2>{{i.title}}</h2>
+      <h3>{{i.desc|truncatewords:5}}</h3>
+         <a href="{% url 'aboutread' i.id %}">Read more</a>
+    {% endfor %}
+</center>
+{% endblock %}
